@@ -2,11 +2,13 @@
 
 <%= render @user %>
 
-
-
 <p>
   <strong>Microposts</strong>
+  <% if @user.id == 1 %>
   <%= @user.microposts.first.content %>
+  <% else %>
+  <% @user.microposts == nil %>
+  <% end %>
 </p>
 
 <div>
